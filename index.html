@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maternal Gene Nutrition Advisor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header>
+          <h1>Maternal Gene Nutrition Advisor</h1>
+          <p class="subtitle">Personalized nutrition recommendations based on genetic analysis</p>
+        </header>
+
+        <div class="analysis-section">
+          <div class="input-section">
+            <h2>Gene Sequence Analysis</h2>
+            <div class="sequence-input">
+              <label for="geneSequence">Enter Gene Sequence:</label>
+              <textarea 
+                id="geneSequence" 
+                placeholder="Enter your gene sequence (e.g., ATCG...)"
+                rows="4"
+              ></textarea>
+              <div class="example-text">Example: ATCGGCTA...</div>
+            </div>
+            <button id="analyzeButton" class="primary-button">
+              Analyze Sequence
+              <div class="loading-indicator"></div>
+            </button>
+          </div>
+
+          <div id="results" class="results-section hidden">
+            <h2>Nutritional Recommendations</h2>
+            <div class="analysis-status">
+              <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Analysis Complete</span>
+              </div>
+              <div class="sequence-info"></div>
+            </div>
+            
+            <div class="recommendations">
+              <div class="recommendation-group">
+                <h3>Essential Nutrients</h3>
+                <ul id="nutrientsList"></ul>
+              </div>
+              
+              <div class="recommendation-group">
+                <h3>Recommended Foods</h3>
+                <div id="foodGrid" class="food-grid"></div>
+              </div>
+
+              <div class="recommendation-group">
+                <h3>Daily Meal Plan</h3>
+                <div id="mealPlan" class="meal-plan"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <p>This is a demonstration of gene-based nutrition analysis. For actual medical advice, please consult healthcare professionals.</p>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
